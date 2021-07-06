@@ -127,6 +127,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap");
+
   html {
     font-family: "Open Sans", sans-serif;
     font-weight: 600;
@@ -139,5 +140,9 @@ export const GlobalStyle = createGlobalStyle`
 
   html input {
     outline: none;
+  }
+
+  * {
+    box-sizing: border-box;
   }
 `

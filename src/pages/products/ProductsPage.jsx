@@ -5,19 +5,26 @@ import MessageContext from "../../contexts/MessageContext";
 import ProductsService from "../../services/ProductsService";
 import Breadcrumbs from "./components/Breadcrumbs";
 import Filters from "./components/Filters";
+import { Link } from "react-router-dom";
 
-function Product({ image, name, price }) {
+function Product({ product }) {
+    const { image, name, price } = product;
+    const slug = name.toLowerCase().split(' ').join('-');
+    const newTo = { pathname: `/product/${slug}`, state: product }
+
     return (
         <li className="products__card card">
-            <div className="card">
-                <img className="card__img" src={image} alt="" />
-                <p className="card__description">
-                    {name}
-                </p>
-                <p className="card__price">
-                    R$ {price}
-                </p>
-            </div>
+            <Link to={newTo}>
+                <div className="card">
+                    <img className="card__img" src={image} alt="" />
+                    <p className="card__description">
+                        {name}
+                    </p>
+                    <p className="card__price">
+                        R$ {price}
+                    </p>
+                </div>
+            </Link>
         </li>
     );
 }
@@ -56,7 +63,7 @@ function ProductsPage() {
                                 filter ? p.name.toUpperCase().indexOf(filter.toUpperCase()) !== -1 : true)
                             .map(
                                 p =>
-                                    <Product key={p.sku} image={p.image} name={p.name} price={p.price} />
+                                    <Product key={p.sku} product={p} />
                             )
                         }
                     </ol>

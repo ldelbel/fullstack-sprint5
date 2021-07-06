@@ -4,13 +4,10 @@ import { GlobalStyle } from './components/GlobalStyle';
 import Header from './components/Header';
 import Message from './components/Message';
 import Spinner from './components/Spinner';
-import CategoriesContext from './contexts/CategoriesContext';
-import FilterContext from './contexts/FilterContext';
-import LoadingContext from './contexts/LoadingContext';
-import MessageContext from './contexts/MessageContext';
 import useLoading from './hooks/useLoading';
-import ProductsPage from './pages/products/ProductsPage';
 import CategoriesService from './services/CategoriesService';
+import { AppContext } from './contexts/AppContext';
+import { Routes } from './Routes';
 
 
 function App() {
@@ -30,24 +27,26 @@ function App() {
       .finally(() => removeRequest());
   }
 
+  const values = {
+    filterValue: { filter, setFilter },
+    loadingValue: { addRequest, removeRequest, isLoading },
+    messageValue: { message, setMessage },
+    categoriesValue: { categories }
+  }
+
+
   return (
     <>
       <GlobalStyle />
-      <FilterContext.Provider value={{ filter, setFilter }}>
-        <LoadingContext.Provider value={{ addRequest, removeRequest, isLoading }}>
-          <MessageContext.Provider value={{ message, setMessage }}>
-            <CategoriesContext.Provider value={{ categories }}>
-              <Spinner></Spinner>
-              <div className="page-container">
-                <Message></Message>
-                <Header></Header>
-                <ProductsPage></ProductsPage>
-              </div>
-              <Footer></Footer>
-            </CategoriesContext.Provider>
-          </MessageContext.Provider>
-        </LoadingContext.Provider>
-      </FilterContext.Provider>
+      <AppContext values={values}>
+        <Spinner></Spinner>
+        <div className="page-container">
+          <Message></Message>
+          <Header></Header>
+          <Routes />
+        </div>
+        <Footer></Footer>
+      </AppContext>
     </>
   );
 }
