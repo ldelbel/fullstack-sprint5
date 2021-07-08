@@ -1,11 +1,12 @@
-import { useContext } from "react";
+import React, { useContext } from "react";
 import FilterContext from "../../contexts/FilterContext";
+import { IFilterContext } from "../../types/interfaces";
 import Menu from "../Menu";
 import { StyledHeader } from './styled';
 
 function Header() {
 
-    const { setFilter } = useContext(FilterContext);
+    const { setFilter } = useContext<IFilterContext>(FilterContext);
 
     return (
         <StyledHeader>

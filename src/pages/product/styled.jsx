@@ -1,9 +1,9 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const StyledProduct = styled.div`
   height: 100%;
   padding: 1rem 4.5rem;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 
   .content {
     display: flex;
@@ -19,7 +19,7 @@ export const StyledProduct = styled.div`
     }
 
     &__image {
-      width: 90%;
+      width: 80%;
       filter: contrast(120%); // será?
     }
 
@@ -39,7 +39,7 @@ export const StyledProduct = styled.div`
         p {
           font-weight: 400;
           font-size: 0.9rem;
-          
+
           span {
             font-weight: bold;
             font-size: 1rem;
@@ -47,9 +47,6 @@ export const StyledProduct = styled.div`
           }
         }
       }
-
     }
   }
-
-
-`
+`;

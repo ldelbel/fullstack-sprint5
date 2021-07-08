@@ -1,9 +1,10 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const StyledShopCard = styled.div`
   width: 470px;
   height: 255px;
-  box-shadow: 0px 5px 5px -3px rgb(0 0 0 / 20%), 0px 8px 10px 1px rgb(0 0 0 / 14%), 0px 3px 14px 2px rgb(0 0 0 / 12%);
+  box-shadow: 0px 5px 5px -3px rgb(0 0 0 / 20%),
+    0px 8px 10px 1px rgb(0 0 0 / 14%), 0px 3px 14px 2px rgb(0 0 0 / 12%);
   padding: 2rem 1.5rem;
 
   > p {
@@ -27,7 +28,7 @@ export const StyledShopCard = styled.div`
 
     strong {
       font-size: 1.6rem;
-      color: #D0403A;
+      color: #d0403a;
       display: flex;
       align-items: center;
     }
@@ -124,8 +125,6 @@ export const StyledShopCard = styled.div`
         cursor: pointer;
         color: #555;
       }
-
     }
   }
-
-`
+`;
