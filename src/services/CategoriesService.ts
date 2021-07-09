@@ -1,4 +1,3 @@
-import { Breadcrumb, Categorie } from "../types";
 import { ICategoriesState } from "../types/interfaces";
 import ServiceUtils from "./ServiceUtils";
 

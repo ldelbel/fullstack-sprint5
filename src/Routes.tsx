@@ -3,7 +3,6 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
 import ProductsPage from './pages/products/ProductsPage';
 import { ProductInfo } from './pages/product/[slug]';
@@ -13,7 +12,7 @@ export function Routes() {
     <Router>
       <Switch>
         <Route path="/" exact component={ProductsPage} />
-        <Route path="/product/:slug" component={ProductInfo} />
+        <Route path="/:slug" component={ProductInfo} />
       </Switch>
     </Router>
   )
