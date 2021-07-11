@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Menu component should match snapshot 1`] = `
+<nav
+  className="header__menu menu"
+>
+  <ul
+    className="menu__list"
+  >
+    <li
+      className="menu__item"
+    >
+      <a
+        className="menu__link"
+        href="#home"
+      >
+        <span>
+          Novidades
+        </span>
+      </a>
+    </li>
+    <li
+      className="menu__item"
+    >
+      <a
+        className="menu__link"
+        href="#home"
+      >
+        <span>
+          Feminino
+        </span>
+      </a>
+    </li>
+  </ul>
+</nav>
+`;

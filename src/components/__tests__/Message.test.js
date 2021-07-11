@@ -1,5 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
+import renderer from 'react-test-renderer';
 import Message from "../Message";
 
 jest.mock("react", () => {
@@ -29,6 +30,22 @@ describe("Message component", () => {
       const { container } = render(<Message />);
       expect(container.firstChild).toHaveClass("alert");
     });
+
+    it('should have a close button', () => {
+      React.useContext.mockImplementation(() => {
+        return { message: "mensagem" };
+      });
+      const { container, getByText } = render(<Message />);
+      expect(container.firstChild.firstChild).toHaveClass("closebtn");
+    });
+
+    it('should match snapshot', () => {
+      React.useContext.mockImplementation(() => {
+        return { message: "mensagem" };
+      });
+      const message = renderer.create(<Message />).toJSON();
+      expect(message).toMatchSnapshot();
+    })
 
   });
 
