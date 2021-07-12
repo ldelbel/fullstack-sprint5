@@ -2,12 +2,15 @@ import styled from "styled-components";
 
 export const StyledProduct = styled.div`
   height: 100%;
-  padding: 1rem 4.5rem;
+  padding: 1rem 0;
   font-family: "Open Sans", sans-serif;
 
   .content {
+    margin: 0 auto;
     display: flex;
     padding-left: 6rem;
+    width: 90%;
+    max-width: 1500px;
 
     > div {
       width: 50%;

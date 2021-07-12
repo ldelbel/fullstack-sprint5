@@ -37,7 +37,7 @@ function App() {
   };
 
   return (
-    <>
+    <div style={{ position: 'relative'}}>
       <GlobalStyle />
       <AppContext values={values}>
         <Spinner></Spinner>
@@ -48,7 +48,7 @@ function App() {
         </div>
         <Footer></Footer>
       </AppContext>
-    </>
+    </div>
   );
 }
 

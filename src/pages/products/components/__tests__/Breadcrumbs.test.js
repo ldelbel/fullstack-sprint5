@@ -32,6 +32,7 @@ const mockContext = {
 };
 
 describe("Breadcrumbs component", () => {
+
   it("should render breadcrumbs", () => {
     React.useContext.mockImplementation(() => {
       return mockContext;
@@ -47,4 +48,5 @@ describe("Breadcrumbs component", () => {
     const breadcrumbs = renderer.getRenderOutput();
     expect(breadcrumbs).toMatchSnapshot();
   });
+  
 });
