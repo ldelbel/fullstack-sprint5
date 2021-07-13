@@ -35,7 +35,7 @@ describe("Message component", () => {
       React.useContext.mockImplementation(() => {
         return { message: "mensagem" };
       });
-      const { container, getByText } = render(<Message />);
+      const { container } = render(<Message />);
       expect(container.firstChild.firstChild).toHaveClass("closebtn");
     });
 

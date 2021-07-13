@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { ReactElement, useEffect, useState } from "react";
 import { Redirect, useHistory, useLocation } from "react-router-dom";
 import Breadcrumbs from "../products/components/Breadcrumbs";
 import { Shopcard } from "./components/ShopCard";
-import { SizeOption } from "./components/SizeOption";
+import { SizeOption } from "./components/SizeOptions";
 import { StyledProduct } from "./styled";
 
 interface ILocation {
@@ -11,7 +11,7 @@ interface ILocation {
     price: string;
 }
 
-export function ProductInfo() {
+export function ProductInfo(): ReactElement<React.FC> {
   const { state } = useLocation<ILocation>();
   const { push } = useHistory();
   const [sizes, setSizes] = useState<number[]>([]);
@@ -35,6 +35,8 @@ export function ProductInfo() {
       push("/404");
     }
     defineSizes();
+
+    // eslint-disable-next-line
   }, []);
 
   return state ? (

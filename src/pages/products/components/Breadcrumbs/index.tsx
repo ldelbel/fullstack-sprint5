@@ -1,10 +1,10 @@
-import React, { useContext } from "react";
+import React, { ReactElement, useContext } from "react";
 import CategoriesContext from "../../../../contexts/CategoriesContext";
 import { ICategoriesContext } from "../../../../types/interfaces";
 import { BreadcrumbItem } from "./BreadcrumbItem";
 import { StyledBreadcrumbs } from "./styled";
 
-function Breadcrumbs() {
+function Breadcrumbs(): ReactElement<React.FC> {
   const { categories } = useContext<ICategoriesContext>(CategoriesContext);
 
   return (

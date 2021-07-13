@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -9,7 +9,7 @@ import ProductsPage from "./pages/products/ProductsPage";
 import { ProductInfo } from "./pages/product/[slug]";
 import { NotFound } from "./components/NotFound";
 
-export function Routes() {
+export function Routes(): ReactElement {
   return (
     <Router>
       <Switch>

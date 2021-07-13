@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { ReactElement, useEffect, useState } from "react";
 import Footer from "./components/Footer";
 import { GlobalStyle } from "./components/GlobalStyle";
 import Header from "./components/Header";
@@ -10,7 +10,7 @@ import { AppContext } from "./contexts/AppContext";
 import { Routes } from "./Routes";
 import { ICategoriesState } from "./types/interfaces";
 
-function App() {
+function App(): ReactElement {
   const [filter, setFilter] = useState<string>("");
   const [message, setMessage] = useState<string>("");
   const [categories, setCategories] = useState<ICategoriesState>(

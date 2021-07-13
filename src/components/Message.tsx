@@ -1,9 +1,9 @@
-import React, { useContext } from "react";
+import React, { ReactElement, useContext } from "react";
 import MessageContext from "../contexts/MessageContext";
 import { IMessageContext } from "../types/interfaces";
 import './Message.css';
 
-function Message() {
+function Message(): ReactElement<React.FC> {
     const { message, setMessage } = useContext<IMessageContext>(MessageContext);
 
     return (

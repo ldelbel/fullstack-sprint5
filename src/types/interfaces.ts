@@ -1,5 +1,5 @@
 import { Dispatch, SetStateAction } from "react";
-import { Breadcrumb, Categorie } from ".";
+import { Breadcrumb, Categorie, Filter, TProduct } from ".";
 
 interface ICategoriesContext {
   categories: ICategoriesState;
@@ -26,7 +26,12 @@ interface ILoadingContext {
   isLoading: () => boolean;
 }
 
-interface ILoadingState extends ILoadingContext {}
+type ILoadingState = ILoadingContext;
+
+interface IProductsRequest {
+  products: TProduct[];
+  filters: Filter[];
+}
 
 export type {
   ICategoriesContext,
@@ -35,4 +40,5 @@ export type {
   ILoadingState,
   IFilterContext,
   IMessageContext,
+  IProductsRequest,
 };

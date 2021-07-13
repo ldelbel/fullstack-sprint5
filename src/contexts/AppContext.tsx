@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactElement, ReactNode } from "react";
 import {
   ICategoriesContext,
   IFilterContext,
@@ -20,7 +20,7 @@ interface IAppContext {
   };
 }
 
-export function AppContext({ children, values }: IAppContext) {
+export function AppContext({ children, values }: IAppContext): ReactElement<React.FC> {
   const { filterValue, loadingValue, messageValue, categoriesValue } = values;
 
   return (

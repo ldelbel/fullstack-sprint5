@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-const StyledSizeOption = styled.button`
+interface StyledSizeOptionProps {
+  isSelected: boolean;
+}
+
+export const StyledSizeOption = styled.button<StyledSizeOptionProps>`
   width: 2.5rem;
   height: 2.2rem;
   background: ${(props) => (props.isSelected ? "#0a0909" : "#fff")};
@@ -16,13 +20,3 @@ const StyledSizeOption = styled.button`
     cursor: pointer;
   }
 `;
-
-export function SizeOption({ size, selected, setSize }) {
-  const isSelected = size === selected;
-
-  return (
-    <StyledSizeOption isSelected={isSelected} onClick={() => setSize(size)}>
-      {size}
-    </StyledSizeOption>
-  );
-}

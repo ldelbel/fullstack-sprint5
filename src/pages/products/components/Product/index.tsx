@@ -1,3 +1,4 @@
+import { ReactElement } from "react";
 import { Link } from "react-router-dom";
 import { TProduct } from "../../../../types";
 import { StyledProduct } from "./styled";
@@ -7,7 +8,7 @@ interface IProduct {
   product: TProduct;
 }
 
-export function Product({ product }: IProduct) {
+export function Product({ product }: IProduct): ReactElement<React.FC> {
   const { image, name, price } = product;
   const slug = name.toLowerCase().split(" ").join("-");
   const newTo = { pathname: `/${slug}`, state: product };

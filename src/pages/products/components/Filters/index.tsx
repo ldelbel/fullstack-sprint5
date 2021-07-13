@@ -1,3 +1,4 @@
+import { ReactElement } from "react";
 import { Filter } from "../../../../types";
 import { FilterItem } from "./FilterItem";
 import { StyledFilters } from "./styled";
@@ -6,7 +7,7 @@ interface IFilters {
   filters: Filter[];
 }
 
-function Filters({ filters }: IFilters) {
+function Filters({ filters }: IFilters): ReactElement<React.FC> {
   return (
     <StyledFilters>
       <ul className="filters__list">

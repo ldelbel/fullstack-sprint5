@@ -1,7 +1,8 @@
+import { ReactElement } from "react";
 import { Link } from "react-router-dom";
 import { StyledNotFound } from "./styled";
 
-export function NotFound() {
+export function NotFound(): ReactElement<React.FC> {
   return (
     <StyledNotFound>
       <img src="/assets/not_found.svg" alt="" />

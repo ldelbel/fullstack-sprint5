@@ -1,8 +1,14 @@
 import { useState } from 'react';
 
-function useLoading() {
+interface IuseLoading {
+    addRequest: () => void;
+    removeRequest: () => void;
+    isLoading: () => boolean;
+}
 
-    const [liveRequests, setLiveRequests] = useState(0);
+function useLoading(): IuseLoading {
+
+    const [liveRequests, setLiveRequests] = useState<number>(0);
 
     function addRequest() {
         setLiveRequests(liveRequests => {

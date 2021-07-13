@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { ReactElement, useContext, useEffect, useState } from "react";
 import FilterContext from "../../contexts/FilterContext";
 import LoadingContext from "../../contexts/LoadingContext";
 import MessageContext from "../../contexts/MessageContext";
@@ -9,7 +9,7 @@ import { Filter, TProduct } from "../../types";
 import { Product } from './components/Product';
 import { StyledProductsPage } from "./styled";
 
-function ProductsPage() {
+function ProductsPage(): ReactElement<React.FC> {
   const [products, setProducts] = useState<TProduct[]>([]);
   const [filters, setFilters] = useState<Filter[]>([]);
 

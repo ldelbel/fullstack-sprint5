@@ -1,10 +1,14 @@
-import React, { useContext } from "react";
+import React, { ReactElement, useContext } from "react";
 import { FiTruck } from "react-icons/fi";
 import { useHistory } from "react-router-dom";
 import MessageContext from "../../../../contexts/MessageContext";
 import { StyledShopCard } from "./styled";
 
-export function Shopcard({ price }) {
+interface ShopCardProps {
+  price: string;
+}
+
+export function Shopcard({ price }: ShopCardProps): ReactElement<React.FC> {
   const { setMessage } = useContext(MessageContext);
   const history = useHistory();
 
