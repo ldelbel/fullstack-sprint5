@@ -1,5 +1,5 @@
 const ServiceUtils = {
-  async handleResponse(req: Promise<Response>) {
+  async handleResponse<T>(req: Promise<Response>): Promise<T> {
     const resp = await req;
     if (resp.ok) {
       return resp.json();

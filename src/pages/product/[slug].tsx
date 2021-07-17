@@ -6,9 +6,9 @@ import { SizeOption } from "./components/SizeOptions";
 import { StyledProduct } from "./styled";
 
 interface ILocation {
-    image: string;
-    name: string;
-    price: string;
+  image: string;
+  name: string;
+  price: string;
 }
 
 export function ProductInfo(): ReactElement<React.FC> {

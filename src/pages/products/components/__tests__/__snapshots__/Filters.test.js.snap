@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Filters component should match snapshot 1`] = `
+<section
+  class="sc-gtsrHT dZnsuN"
+>
+  <ul
+    class="filters__list"
+  >
+    <div
+      class="sc-bdnxRM gbWXzX"
+    >
+      <span
+        class="filters__label"
+      >
+        Tamanho
+      </span>
+      <img
+        alt="filtro"
+        class="filters__img"
+        src="assets/filter.svg"
+      />
+    </div>
+    <div
+      class="sc-bdnxRM gbWXzX"
+    >
+      <span
+        class="filters__label"
+      >
+        Cor
+      </span>
+      <img
+        alt="filtro"
+        class="filters__img"
+        src="assets/filter.svg"
+      />
+    </div>
+  </ul>
+</section>
+`;

@@ -1,20 +1,44 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Breadcrumbs component should match snapshot 1`] = `
-<styled.section>
+<section
+  class="sc-gtsrHT oqtMB"
+>
   <nav>
     <ol
-      className="breadcrumbs__list"
+      class="breadcrumbs__list"
     >
-      <BreadcrumbItem
-        link="#home"
-        name="Home"
-      />
-      <BreadcrumbItem
-        link="#home"
-        name="Infantil"
-      />
+      <div
+        class="sc-bdnxRM dhyORQ"
+      >
+        <a
+          class="breadcrumbs__link"
+          href="#home"
+        >
+          Home
+        </a>
+        <span
+          class="breadcrumbs__item  breadcrumbs__separator"
+        >
+          /
+        </span>
+      </div>
+      <div
+        class="sc-bdnxRM dhyORQ"
+      >
+        <a
+          class="breadcrumbs__link"
+          href="#home"
+        >
+          Infantil
+        </a>
+        <span
+          class="breadcrumbs__item  breadcrumbs__separator"
+        >
+          /
+        </span>
+      </div>
     </ol>
   </nav>
-</styled.section>
+</section>
 `;

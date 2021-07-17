@@ -1,19 +1,49 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Spinner component when loading state is true should match snapshot 1`] = `
+exports[`NotFound component should match snapshot 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
       <div
-        class="loading"
-      />
+        class="sc-bdnxRM cvKalO"
+      >
+        <img
+          alt=""
+          src="/assets/not_found.svg"
+        />
+        <p>
+          Ops! Página não Encontrada
+        </p>
+        <a
+          href="/"
+        >
+          <span>
+            Clique aqui para voltar para Home
+          </span>
+        </a>
+      </div>
     </div>
   </body>,
   "container": <div>
     <div
-      class="loading"
-    />
+      class="sc-bdnxRM cvKalO"
+    >
+      <img
+        alt=""
+        src="/assets/not_found.svg"
+      />
+      <p>
+        Ops! Página não Encontrada
+      </p>
+      <a
+        href="/"
+      >
+        <span>
+          Clique aqui para voltar para Home
+        </span>
+      </a>
+    </div>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

@@ -37,7 +37,7 @@ function App(): ReactElement {
   };
 
   return (
-    <div style={{ position: 'relative'}}>
+    <div style={{ position: "relative" }}>
       <GlobalStyle />
       <AppContext values={values}>
         <Spinner></Spinner>

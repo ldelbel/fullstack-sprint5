@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { TProduct } from "../../../../types";
 import { StyledProduct } from "./styled";
 
-
 interface IProduct {
   product: TProduct;
 }
