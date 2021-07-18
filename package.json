@@ -23,10 +23,10 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "yarn prettier && yarn eslint && yarn test && react-scripts build",
     "test": "react-scripts test --coverage --watchAll=false",
-    "minitest": "react-scripts test src/__tests__/App.test.js",
-    "eject": "react-scripts eject"
+    "eslint": "npx eslint . --fix",
+    "prettier": "npx prettier --write ."
   },
   "eslintConfig": {
     "extends": [
