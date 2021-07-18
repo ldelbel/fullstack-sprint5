@@ -8,13 +8,13 @@ function Message(): ReactElement<React.FC> {
 
   return message ? (
     <div className="alert">
-      <span className="closebtn" onClick={() => setMessage("")}>
+      <span data-testid="close" className="closebtn" onClick={() => setMessage("")}>
         &times;
       </span>
       {message}
     </div>
   ) : (
-    <div></div>
+    <div data-testid="empty"></div>
   );
 }
 

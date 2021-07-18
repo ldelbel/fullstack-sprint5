@@ -25,7 +25,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --coverage --watchAll=false",
-    "minitest": "react-scripts test src/components/__tests__/NotFound.test.js",
+    "minitest": "react-scripts test src/__tests__/App.test.js",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -45,5 +45,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "jest": {
+    "collectCoverageFrom": ["src/**/*.{js,jsx,ts,tsx}","!src/index.tsx"]
   }
 }

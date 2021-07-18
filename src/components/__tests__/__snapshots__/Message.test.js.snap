@@ -10,6 +10,7 @@ Object {
       >
         <span
           class="closebtn"
+          data-testid="close"
         >
           ×
         </span>
@@ -23,6 +24,7 @@ Object {
     >
       <span
         class="closebtn"
+        data-testid="close"
       >
         ×
       </span>

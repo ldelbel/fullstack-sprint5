@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SizeOption component should match snapshot 1`] = `
+<button
+  class="sc-bdnxRM gbzMmI"
+  data-testid="option"
+>
+  6
+</button>
+`;
