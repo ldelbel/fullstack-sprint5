@@ -1,6 +1,5 @@
 import React from "react";
-import { render } from "@testing-library/react";
-import renderer from 'react-test-renderer';
+import { render, screen, fireEvent } from "@testing-library/react";
 import Message from "../Message";
 
 jest.mock("react", () => {
@@ -11,10 +10,11 @@ jest.mock("react", () => {
   };
 });
 
+let mensagem = "mensagem";
+const setMensagem = (msg) => (mensagem = msg);
+
 describe("Message component", () => {
-
   describe("when message state is not null", () => {
-
     it("should render component with messate state content", () => {
       React.useContext.mockImplementation(() => {
         return { message: "mensagem" };
@@ -31,26 +31,35 @@ describe("Message component", () => {
       expect(container.firstChild).toHaveClass("alert");
     });
 
-    it('should have a close button', () => {
+    it("should have a functional close button", () => {
       React.useContext.mockImplementation(() => {
-        return { message: "mensagem" };
+        return { message: mensagem, setMessage: setMensagem };
       });
-      const { container } = render(<Message />);
-      expect(container.firstChild.firstChild).toHaveClass("closebtn");
+
+      const { rerender } = render(<Message />);
+
+      const closeBtn = screen.getByTestId("close");
+
+      expect(closeBtn).toHaveClass("closebtn");
+
+      fireEvent.click(closeBtn);
+
+      rerender(<Message />);
+
+      expect(screen.getByTestId("empty")).toBeInTheDocument();
+      expect(screen.getByTestId("empty")).toBeEmptyDOMElement();
     });
 
-    it('should match snapshot', () => {
+    it("should match snapshot", () => {
       React.useContext.mockImplementation(() => {
         return { message: "mensagem" };
       });
-      const message = renderer.create(<Message />).toJSON();
+      const message = render(<Message />);
       expect(message).toMatchSnapshot();
-    })
-
+    });
   });
 
   describe("when message state is null", () => {
-
     it("should render an empty div", () => {
       React.useContext.mockImplementation(() => {
         return { message: null };
@@ -58,7 +67,5 @@ describe("Message component", () => {
       const { container } = render(<Message />);
       expect(container.firstChild).toBeEmptyDOMElement();
     });
-
   });
-  
 });

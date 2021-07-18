@@ -8,7 +8,7 @@ interface ShopCardProps {
   price: string;
 }
 
-export function Shopcard({ price }: ShopCardProps): ReactElement<React.FC> {
+export function ShopCard({ price }: ShopCardProps): ReactElement<React.FC> {
   const { setMessage } = useContext(MessageContext);
   const history = useHistory();
 

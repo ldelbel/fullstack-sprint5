@@ -6,7 +6,7 @@ import ProductsService from "../../services/ProductsService";
 import Breadcrumbs from "./components/Breadcrumbs";
 import Filters from "./components/Filters";
 import { Filter, TProduct } from "../../types";
-import { Product } from './components/Product';
+import { Product } from "./components/Product";
 import { StyledProductsPage } from "./styled";
 
 function ProductsPage(): ReactElement<React.FC> {
@@ -35,7 +35,7 @@ function ProductsPage(): ReactElement<React.FC> {
     <StyledProductsPage>
       <Breadcrumbs></Breadcrumbs>
       <Filters filters={filters}></Filters>
-      <section className="main__products products">
+      <section data-testid="wrap" className="main__products products">
         <div className="products__row">
           <ol className="products__list">
             {products

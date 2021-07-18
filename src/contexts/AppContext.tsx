@@ -20,7 +20,10 @@ interface IAppContext {
   };
 }
 
-export function AppContext({ children, values }: IAppContext): ReactElement<React.FC> {
+export function AppContext({
+  children,
+  values,
+}: IAppContext): ReactElement<React.FC> {
   const { filterValue, loadingValue, messageValue, categoriesValue } = values;
 
   return (

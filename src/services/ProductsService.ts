@@ -4,7 +4,7 @@ import ServiceUtils from "./ServiceUtils";
 const ProductsService = {
   get(): Promise<IProductsRequest> {
     const url = "/data/products.json";
-    return ServiceUtils.handleResponse(fetch(url));
+    return ServiceUtils.handleResponse<IProductsRequest>(fetch(url));
   },
 };
 

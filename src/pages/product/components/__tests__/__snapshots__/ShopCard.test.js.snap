@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ShopCard component should match snapshot 1`] = `
+<div
+  class="sc-bdnxRM frziFI"
+>
+  <p>
+    Vendido e entregue por 
+    <span>
+      RCHLO
+    </span>
+  </p>
+  <div
+    class="prices"
+  >
+    <strong>
+      R$ 
+      300
+    </strong>
+    <div>
+      <span>
+        Cartão de crédito 1x de R$ 
+        300
+      </span>
+      <span>
+        Cartão de crédito 3x de R$ 
+        100,00
+      </span>
+    </div>
+  </div>
+  <button
+    class="addBtn"
+  >
+    ADICIONAR À SACOLA
+  </button>
+  <div
+    class="deliver"
+  >
+    <div
+      class="deliver__info"
+    >
+      <svg
+        color="#333"
+        fill="none"
+        height="20"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        style="color: rgb(51, 51, 51);"
+        viewBox="0 0 24 24"
+        width="20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
+          height="13"
+          width="15"
+          x="1"
+          y="3"
+        />
+        <polygon
+          points="16 8 20 8 23 11 23 16 16 16 16 8"
+        />
+        <circle
+          cx="5.5"
+          cy="18.5"
+          r="2.5"
+        />
+        <circle
+          cx="18.5"
+          cy="18.5"
+          r="2.5"
+        />
+      </svg>
+      <span>
+        Consulte o frete
+      </span>
+      <input
+        id="CEP"
+        name="CEP"
+        pattern="\\\\d{5}-\\\\d{3}"
+        placeholder="______-___"
+        required=""
+      />
+      <button>
+        OK
+      </button>
+    </div>
+    <p>
+      Não sei meu cep
+    </p>
+  </div>
+</div>
+`;
