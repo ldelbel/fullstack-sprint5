@@ -15,7 +15,7 @@ const categories = {
       link: "#home",
       name: "Infantil",
     },
-  ]
+  ],
 };
 
 describe("Breadcrumbs component", () => {

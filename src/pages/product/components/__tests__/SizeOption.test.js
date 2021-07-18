@@ -1,7 +1,6 @@
 import React from "react";
 import { fireEvent, render, screen } from "@testing-library/react";
 import { SizeOption } from "../SizeOption";
-import { act } from "react-dom/test-utils";
 
 let selected = 6;
 const setSize = (n) => (selected = n);
@@ -31,7 +30,7 @@ describe("SizeOption component", () => {
     const option = screen.getByTestId("option");
 
     expect(option).toHaveTextContent(10);
-    expect(selected).toBe(6)
+    expect(selected).toBe(6);
 
     fireEvent.click(option);
 

@@ -15,7 +15,11 @@ export function SizeOption({
   const isSelected = size === selected;
 
   return (
-    <StyledSizeOption data-testid="option" isSelected={isSelected} onClick={() => setSize(size)}>
+    <StyledSizeOption
+      data-testid="option"
+      isSelected={isSelected}
+      onClick={() => setSize(size)}
+    >
       {size}
     </StyledSizeOption>
   );

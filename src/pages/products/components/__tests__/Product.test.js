@@ -11,7 +11,6 @@ const product = {
 };
 
 describe("Product component", () => {
-
   it("should render filters", () => {
     const { getByRole } = render(
       <MemoryRouter>
@@ -29,5 +28,4 @@ describe("Product component", () => {
     );
     expect(container.firstChild).toMatchSnapshot();
   });
-
 });

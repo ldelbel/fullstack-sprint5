@@ -22,7 +22,6 @@ export function ShopCard({ price }: ShopCardProps): ReactElement<React.FC> {
     setTimeout(() => {
       history.push("/");
     }, 1200);
-
   }
 
   return (

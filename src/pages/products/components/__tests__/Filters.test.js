@@ -14,7 +14,6 @@ const filters = [
 ];
 
 describe("Filters component", () => {
-
   it("should render filters", () => {
     const { getByRole } = render(<Filters filters={filters} />);
     expect(getByRole("list")).toHaveClass("filters__list");
@@ -24,5 +23,4 @@ describe("Filters component", () => {
     const { container } = render(<Filters filters={filters} />);
     expect(container.firstChild).toMatchSnapshot();
   });
-  
 });
