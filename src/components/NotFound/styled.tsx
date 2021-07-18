@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const StyledNotFound = styled.div`
   position: absolute;
@@ -16,14 +16,14 @@ export const StyledNotFound = styled.div`
     width: 50rem;
   }
 
-  p { 
+  p {
     font-weight: 400;
     font-size: 3rem;
     margin-top: 4rem;
   }
 
-  a { 
+  a {
     margin-top: 3rem;
-    color: #6C63FF;
+    color: #6c63ff;
   }
-`
+`;

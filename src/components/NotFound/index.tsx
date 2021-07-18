@@ -7,8 +7,9 @@ export function NotFound(): ReactElement<React.FC> {
     <StyledNotFound>
       <img src="/assets/not_found.svg" alt="" />
       <p>Ops! Página não Encontrada</p>
-      <Link to="/"><span>Clique aqui para voltar para Home</span></Link>
+      <Link to="/">
+        <span>Clique aqui para voltar para Home</span>
+      </Link>
     </StyledNotFound>
-
-  )
+  );
 }

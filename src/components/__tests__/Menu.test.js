@@ -1,6 +1,5 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import renderer from 'react-test-renderer';
 import Menu from "../Menu";
 
 jest.mock("react", () => {
@@ -33,8 +32,8 @@ describe("Menu component", () => {
     expect(getByText("Feminino")).toBeInTheDocument();
   });
 
-  it('should match snapshot', () => {
-    const menu = renderer.create(<Menu />).toJSON();
+  it("should match snapshot", () => {
+    const menu = render(<Menu />);
     expect(menu).toMatchSnapshot();
-  })
+  });
 });

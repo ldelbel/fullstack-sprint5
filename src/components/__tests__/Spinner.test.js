@@ -1,6 +1,5 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import renderer from 'react-test-renderer';
 import Spinner from "../Spinner";
 
 jest.mock("react", () => {
@@ -25,7 +24,7 @@ describe("Spinner component", () => {
       React.useContext.mockImplementation(() => {
         return { isLoading: () => true };
       });
-      const spinner = renderer.create(<Spinner />).toJSON();
+      const spinner = render(<Spinner />);
       expect(spinner).toMatchSnapshot();
     });
   });

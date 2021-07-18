@@ -1,5 +1,3 @@
-
-
 .hide {
   display: none;
 }
@@ -55,11 +53,11 @@
 }
 
 .footer__contact .contact__input:hover {
-  border-bottom: 2px solid #261E1E;
+  border-bottom: 2px solid #261e1e;
 }
 
 .footer__contact .contact__input:focus-within {
-  border-bottom: 2px solid #261E1E;
+  border-bottom: 2px solid #261e1e;
 }
 
 .footer__contact .contact__input::placeholder {
@@ -237,7 +235,7 @@
 .footer__bottom .copyright__text {
   font-size: 0.5625rem;
   font-weight: 400;
-  color: #261E1E;
+  color: #261e1e;
 }
 
 .footer__bottom .copyright__stamp {
